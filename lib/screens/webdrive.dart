@@ -41,7 +41,7 @@ class _WebDrive extends State<WebDrive> {
           },
         ),
         title: Text(
-          "UP Panammun 2022",
+          "UP Panammun 2023",
           textAlign: TextAlign.right,
           style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.04, letterSpacing: 1)),

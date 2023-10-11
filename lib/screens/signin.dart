@@ -198,10 +198,10 @@ class _SignInState extends State<SignIn> {
                       GestureDetector(
                         onTap: () {
                           _showDialog2(context,"Documentos Panammun", "Documentos Panammun",
-                              "https://drive.google.com/file/d/1SzR5LVhSl7yDsvF8mGuV1Kc2WQAk34F_/view?usp=sharing",
-                              "https://drive.google.com/file/d/1soJc9pZhzJ7rzT-shns2RNXhASQ_4Z87/view?usp=sharing",
-                              "https://drive.google.com/file/d/1R8rMZqS4fSkQvnLfihO_GYh0TMwFk3bg/view?usp=sharing",
-                              "https://drive.google.com/file/d/1SMebYG9cbwOqhGu-2VcZk_K7-gFtGatq/view?usp=sharing");
+                              "https://drive.google.com/file/d/1CIDyEVKQKUjuhv07DYIdVu_A-Cul3Mew/view?usp=sharing",
+                              "https://drive.google.com/file/d/1L1DKhmbA6MhMUCsGVqSOVqib5_5NO27l/view?usp=sharing",
+                              "https://drive.google.com/file/d/1m7qJtKg1ELjT6rF06q5mXTKvI5FMsj0n/view?usp=sharing",
+                              "https://drive.google.com/file/d/1pxsHJkyIzzbQue1k3TVnpR1jhyNXmM0u/view?usp=sharing");
                         },
                         child: Text(
                           "Documentos",
@@ -241,9 +241,8 @@ class _SignInState extends State<SignIn> {
                                   "deliberaciones multilaterales sobre toda la gama de cuestiones internacionales"
                                   "que abarca la Carta de las Naciones Unidas. En dicho órgano existe igualdad de"
                                   "voto para todos los Estados Miembros.",
-                                  "https://drive.google.com/file/d/1iewLyBWp0hh82j6lQaLG0RQ_1OvDXgD6/view?usp=sharing",
-                                  "https://drive.google.com/file/d/10oPhEw_seRnHDcTzs3qcuw0TmkeNmO0N/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1al-Ov_LLyt1PxGodLJOvl5zpBgFZ_jIC/view?usp=sharing");
+                                  "https://drive.google.com/file/d/1zO0bEo37bggIPu1neFx8lgLsDV2PgonW/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1TQsGBiXrviuqTET98mGE7C75pUXmvVJF/view?usp=sharing");
                             },
                             icon: Image.asset("assets/asambleageneral.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -252,9 +251,8 @@ class _SignInState extends State<SignIn> {
                           IconButton(
                             onPressed: (){
                               _showDialog1(context,"ECOSOC", "El Consejo Económico y Social forma parte del núcleo del sistema de las Naciones Unidas y tiene como objetivo promover la materialización de las tres dimensiones del desarrollo sostenible (económica, social y ambiental). Este órgano constituye una plataforma fundamental para fomentar el debate y el pensamiento innovador, alcanzar un consenso sobre la forma de avanzar y coordinar los esfuerzos encaminados al logro de los objetivos convenidos internacionalmente. Asimismo, es responsable del seguimiento de los resultados de las grandes conferencias y cumbres de las Naciones Unidas.",
-                                  "https://drive.google.com/file/d/1kRYHBaL5nfuC_i6id4GDkOzhKbWU2DBA/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1n5HDWI_bgjyaLBWBT5egVAEaoyjTixLg/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1mxMhNdtD-zskBnXrx6vDsEy40L3PjZrb/view?usp=sharing");
+                                  "https://drive.google.com/file/d/1N-RfuajcXF1jpDO8dMepexO7Qz2-4XQz/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1FwJK69WQ5c_FVW0E1MYGCyf39wz2Uhy9/view?usp=sharing");
                             },
                             icon: Image.asset("assets/ecosoc.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -262,9 +260,8 @@ class _SignInState extends State<SignIn> {
                           IconButton(
                             onPressed: (){
                               _showDialog1(context,"DERECHOS HUMANOS", "El Comité de Derechos Humanos es el órgano de expertos independientes que supervisa la aplicación del Pacto Internacional de Derechos Civiles y Políticos por sus Estados Partes.Todos los Estados Partes deben presentar al Comité informes periódicos sobre la manera en que se ejercitan los derechos. Inicialmente los Estados deben presentar un informe un año después de su adhesión al Pacto y luego siempre que el Comité lo solicite (por lo general cada cuatro años). El Comité examina cada informe y expresa sus preocupaciones y recomendaciones al Estado Parte en forma de \"observaciones finales\".",
-                                  "https://drive.google.com/file/d/1Cj5LiOctN7yDT_qFrfDF1ZYIqf9cnk2_/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1S9F1YPid4yxOZFdMYmqpfKEnseR932kh/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1mEohhJk4-P9GbQGL4kHarcCK3ccPbmQx/view?usp=sharing");
+                                  "https://drive.google.com/file/d/11LYgWnyingBLKuwuWTZPLcCAe8VY9Di8/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1rh3J_6uCXS0w3fvOfoxvR9MceI96KHW7/view?usp=sharing");
                             },
                             icon: Image.asset("assets/hrc.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -272,9 +269,8 @@ class _SignInState extends State<SignIn> {
                           IconButton(
                             onPressed: (){
                               _showDialog1(context,"OEA", "La Organización de los Estados Americanos es el organismo regional más antiguo del mundo, cuyo origen se remonta a la Primera Conferencia Internacional Americana, celebrada en Washington, D.C., de octubre de 1889 a abril de 1890.  En esta reunión, se acordó crear la Unión Internacional de Repúblicas Americanas y se empezó a tejer una red de disposiciones e instituciones que llegaría a conocerse como “sistema interamericano”, el más antiguo sistema institucional internacional.",
-                                  "https://drive.google.com/file/d/1osBAAWIOkOq3P-L1PJ7cR2fTONO7MdMR/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1XsIZi6okZ-I_g3v3YyV7xwEjBQSiszGv/view?usp=sharing",
-                                  "https://drive.google.com/file/d/11GyJYHW0ws9R4p9SIhyQXlzCoOfaA6Ck/view?usp=sharing");
+                                  "https://drive.google.com/file/d/1kw8OB6g5s2BoH5KFj1Op4uSwBcbnnOCY/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1Sz7L_OpMR-UQ8hUKq-gIwrXUiC5fhNM7/view?usp=sharing");
                             },
                             icon: Image.asset("assets/oea.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -286,15 +282,14 @@ class _SignInState extends State<SignIn> {
                         children:<Widget>[
                           IconButton(
                             onPressed: (){
-                              _showDialog1(context,"OMS", "La Organización Mundial de la Salud (OMS) es el organismo de las"
-                                  "Naciones Unidas especializado en salud, integrado por 194 Estados Miembros"
-                                  "distribuidos en seis regiones y con más de 150 oficinas alrededor del planeta. La"
-                                  "OMS trabaja en todo el mundo para promover el grado máximo de salud que se"
-                                  "pueda lograr para todas las personas, independientemente de su raza, religión,"
-                                  "género, ideología política o condición económica o social.",
-                                  "https://drive.google.com/file/d/1XsIb8wUl9yBgv_SiN-exLfBC_VWSgF_o/view?usp=sharing",
-                                  "https://drive.google.com/file/d/12feE9An86EZZxpSVobS4zD5T6UIQZ50B/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1fBW33XFADFd_-qRSf3gADWp9tX8R6tZP/view?usp=sharing");
+                              _showDialog1(context,"UNICEF", "El Fondo de las Naciones Unidas para la Infancia (UNICEF) es la agencia de las Organización de las Naciones Unidas (ONU) enfocada en promover los derechos y el bienestar"
+                                  "de todos los niños, niñas y adolescentes en México y en el mundo."
+                                  "Fue creado para brindar ayuda urgente a los niños y niñas víctimas de las guerras y abordar"
+                                  "las necesidades a largo plazo de la niñez y las mujeres en países en desarrollo que se encuentran en desventaja."
+                                  "Actualmente trabaja en 190 países y territorios en acciones prácticas que beneficien a todos los niños, niñas y "
+                                  "adolescentes, especialmente los más vulnerables y excluidos.",
+                                  "https://drive.google.com/file/d/1sFpcInhaRDSDInkIFGmAa5wzOnrzDH05/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1xf43gAa5g8oeBdSFL70_COUOV45EAEPC/view?usp=sharing");
                             },
                             icon: Image.asset("assets/oms.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -302,9 +297,8 @@ class _SignInState extends State<SignIn> {
                           IconButton(
                             onPressed: (){
                               _showDialog1(context,"ONU MUJERES", "La Comisión de la Condición Jurídica y Social de la Mujer es el principal órgano internacional intergubernamental dedicado exclusivamente a la promoción de la igualdad de género y el empoderamiento de la mujer. Se trata de una comisión orgánica dependiente del Consejo Económico y Social, creado en virtud de la resolución 11 del Consejo, el 21 de junio de 1946.",
-                                  "https://drive.google.com/file/d/1o6sWy2IkmJdN3tIdj51Hdo4FJhUWguzM/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1HzbOk3CHnbkJKEc2QV5bc9mko2qD-nER/view?usp=sharing",
-                                  "https://drive.google.com/file/d/17ulGAzhr2yyiAny3Xc0oCJF4CLOIJ7qE/view?usp=sharing");
+                                  "https://drive.google.com/file/d/1njk1AoYstspW9yL90B_0yT4-I_k_kXqR/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1vSb59vtk12eVkrzdskKJJLdnKBXLGiXA/view?usp=sharing");
                             },
                             icon: Image.asset("assets/onumujeres.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -312,9 +306,8 @@ class _SignInState extends State<SignIn> {
                           IconButton(
                             onPressed: (){
                               _showDialog1(context,"SECURITY COUNCIL", "El Consejo de Seguridad tiene la responsabilidad primordial del mantenimiento de la paz y la seguridad internacionales. Tiene 15 Miembros, y cada Miembro tiene un voto. Según la Carta de las Naciones Unidas, todos los Estados miembros están obligados a cumplir las decisiones del Consejo.",
-                                  "https://drive.google.com/file/d/1MhldNf_ZIFEDx9I0ZEKHmM4FvxL4IvR3/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1oQqBdsSa3EklFKZQgx3NIvB6EjKCUrjv/view?usp=sharing",
-                                  "https://drive.google.com/file/d/1240cgbOKyjjqKWNZC8FLzPViILWFQSp6/view?usp=sharing");
+                                  "https://drive.google.com/file/d/1ayLRb8oGmFxQTWVL9nxVqBMf-mUXBujk/view?usp=sharing",
+                                  "https://drive.google.com/file/d/1odvM3zkcukEM6upFjdmMPSJV5VF-ag_v/view?usp=sharing");
                             },
                             icon: Image.asset("assets/securitycouncil.png"),
                             iconSize: MediaQuery.of(context).size.width*0.15,
@@ -330,7 +323,7 @@ class _SignInState extends State<SignIn> {
         ));
   }
 
-  void _showDialog1(BuildContext context, String comite, String mensaje, String link1, String topic1, String topic2) {
+  void _showDialog1(BuildContext context, String comite, String mensaje, String topic1, String topic2) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -347,18 +340,6 @@ class _SignInState extends State<SignIn> {
               SizedBox(
                 height: MediaQuery.of(context).size.height*0.01,
               ),
-              Container(
-                  child: InkWell(
-                    onTap: () => Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                        builder: (context) => new WebDrive(url:link1),
-                      ),
-                    ),
-                    child: Text("Para más información del comité da click aquí", textAlign: TextAlign.justify, style: GoogleFonts.prata(
-                        textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1,
-                            decoration:TextDecoration.underline))),
-                  )),
               SizedBox(
                 height: MediaQuery.of(context).size.height*0.01,
               ),

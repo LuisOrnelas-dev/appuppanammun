@@ -119,6 +119,50 @@ class _HomeState extends State<Home> {
     return completer.future;
   }
 
+  Future<File> createFileOfPdfUrl(String url, String filename) async {
+    // To open from assets, you can copy them to the app storage folder, and the access them "locally"
+    Completer<File> completer = Completer();
+    print("Start download file from internet!");
+    try {
+      var request = await HttpClient().getUrl(Uri.parse(url));
+      var response = await request.close();
+      var bytes = await consolidateHttpClientResponseBytes(response);
+      var dir = await getApplicationDocumentsDirectory();
+      print("Download files");
+      print("${dir.path}/$filename");
+      File file = File("${dir.path}/$filename");
+
+      await file.writeAsBytes(bytes, flush: true);
+      completer.complete(file);
+    } catch (e) {
+      throw Exception('Error parsing asset file!');
+    }
+
+    return completer.future;
+  }
+
+  Future<File> createFileOfPdfUrl2(String url, String filename) async {
+    // To open from assets, you can copy them to the app storage folder, and the access them "locally"
+    Completer<File> completer = Completer();
+    print("Start download file from internet2!");
+    try {
+      var request = await HttpClient().getUrl(Uri.parse(url));
+      var response = await request.close();
+      var bytes = await consolidateHttpClientResponseBytes(response);
+      var dir = await getApplicationDocumentsDirectory();
+      print("Download files2");
+      print("${dir.path}/$filename");
+      File file = File("${dir.path}/$filename");
+
+      await file.writeAsBytes(bytes, flush: true);
+      completer.complete(file);
+    } catch (e) {
+      throw Exception('Error parsing asset file2!');
+    }
+
+    return completer.future;
+  }
+
   bool isLoading=false;
   String? nameuser = "";
   String? statustring ="";
@@ -528,7 +572,7 @@ class _HomeState extends State<Home> {
               ),
             ]);
         break;
-      case 'OMS':
+      case 'UNICEF':
         widget = Column(
             children:<Widget>[
               Text(
@@ -550,12 +594,12 @@ class _HomeState extends State<Home> {
                   )),
               SizedBox( height: MediaQuery.of(context).size.height*0.04),
               Text(
-                "La Organización Mundial de la Salud (OMS) es el organismo de las"
-                    "Naciones Unidas especializado en salud, integrado por 194 Estados Miembros"
-                    "distribuidos en seis regiones y con más de 150 oficinas alrededor del planeta. La"
-                    "OMS trabaja en todo el mundo para promover el grado máximo de salud que se"
-                    "pueda lograr para todas las personas, independientemente de su raza, religión,"
-                    "género, ideología política o condición económica o social.",
+                "El Fondo de las Naciones Unidas para la Infancia (UNICEF) es la agencia de las Organización de las Naciones Unidas (ONU) enfocada en promover los derechos y el bienestar"
+                "de todos los niños, niñas y adolescentes en México y en el mundo."
+                "Fue creado para brindar ayuda urgente a los niños y niñas víctimas de las guerras y abordar"
+                "las necesidades a largo plazo de la niñez y las mujeres en países en desarrollo que se encuentran en desventaja."
+                "Actualmente trabaja en 190 países y territorios en acciones prácticas que beneficien a todos los niños, niñas y "
+                "adolescentes, especialmente los más vulnerables y excluidos.",
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.prata(
                   textStyle: TextStyle(
@@ -611,6 +655,96 @@ class _HomeState extends State<Home> {
 
   openpdf(){
     switch (comite){
+
+      //remote files
+      case 'Asamblea General':
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/AG1.pdf', 'AG1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/AG2.pdf', 'AG2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+      case 'Security Council':
+        print("entre");
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/SC1.pdf', 'SC1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/SC2.pdf', 'SC2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+      case 'ECOSOC':
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/ECOSOC1.pdf', 'ECOSOC1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/ECOSOC2.pdf', 'ECOSOC2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+      case 'ONU Mujeres':
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/ONUM1.pdf', 'ONUM1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/ONUM2.pdf', 'ONUM2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+      case 'Derechos Humanos':
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/HRC1.pdf', 'HRC1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/HRC2.pdf', 'HRC2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+      case 'UNICEF':
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/UNICEF1.pdf', 'UNICEF1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/UNICEF2.pdf', 'UNICEF2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+      case 'OEA':
+        createFileOfPdfUrl('https://uppanammun.s3.amazonaws.com/Documentos/OEA1.pdf', 'OEA1.pdf').then((f) {
+          setState(() {
+            pathPDF = f.path;
+          });
+        });
+        createFileOfPdfUrl2('https://uppanammun.s3.amazonaws.com/Documentos/OEA2.pdf', 'OEA2.pdf').then((f) {
+          setState(() {
+            pathPDF2 = f.path;
+          });
+        });
+        break;
+
+      //local files
+    /*
       case 'Asamblea General':
         fromAsset('assets/AG1.pdf', 'AG1.pdf').then((f) {
           setState(() {
@@ -696,6 +830,8 @@ class _HomeState extends State<Home> {
           });
         });
         break;
+
+     */
     }
   }
 
@@ -727,7 +863,7 @@ class _HomeState extends State<Home> {
                         ElevatedButton.icon(
                           onPressed: (){
                             openpdf();
-                            //print(pathPDF.toString());
+                            print(pathPDF.toString());
                             //print(comite);
                             if (pathPDF.isNotEmpty) {
                               Navigator.push(
@@ -1107,7 +1243,7 @@ class _HomeState extends State<Home> {
             InAppWebView(
               key: webViewKey,
               initialUrlRequest:
-              URLRequest(url: Uri.parse("https://drive.google.com/drive/folders/1oUp2lfS1tmOcEHsvqqIykHt6KdUW9ADD?usp=sharing")),
+              URLRequest(url: Uri.parse("https://drive.google.com/drive/folders/1NeSpUQr_VRcE0Oqj-LZNmZAwEhqzlvER?usp=sharing")),
               initialOptions: options,
               pullToRefreshController: pullToRefreshController,
               onWebViewCreated: (controller) {
@@ -1324,7 +1460,7 @@ class _HomeState extends State<Home> {
             );
           },),
           title: Text(
-            "UP Panammun 2022",
+            "UP Panammun 2023",
             textAlign: TextAlign.right,
             style: GoogleFonts.prata(
                 textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.04, letterSpacing: 1)),
@@ -1411,7 +1547,7 @@ class _HomeState extends State<Home> {
             );
           },),
           title: Text(
-            "UP Panammun 2022",
+            "UP Panammun 2023",
             textAlign: TextAlign.right,
             style: GoogleFonts.prata(
                 textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.04, letterSpacing: 1)),
@@ -2091,7 +2227,7 @@ class Page1 extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Panammun 2022',  style: GoogleFonts.prata(
+          title: Text('Panammun 2023',  style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),
           content: Text('¿Estás seguro de querer eliminar tu cuenta ' + email.toString() +'?, Toda tu información se perderá',  style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),
@@ -2192,7 +2328,7 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "UP Panammun 2022",
+          "UP Panammun 2023",
           textAlign: TextAlign.right,
           style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.04, letterSpacing: 1)),

@@ -537,7 +537,7 @@ class _SignUpState extends State<SignUp> {
                             showDialog<String>(
                                 context: context,
                                 builder: (BuildContext context) => AlertDialog(
-                              title: Text('Panammun 2022',  style: GoogleFonts.prata(
+                              title: Text('Panammun 2023',  style: GoogleFonts.prata(
                                   textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),
                               content: Text('¿Toda tu información es correcta?, Asegúrate de que toda tu información'
                                   ' sea correcta ya que será evaluada por nuestro comité de registro.',  style: GoogleFonts.prata(
@@ -635,7 +635,8 @@ class _SignUpState extends State<SignUp> {
     print(data.toString());
     final  response= await http.post(
       Uri.parse(REGISTRATION),
-      headers: {
+        //Uri.parse("https://panammun-production.up.railway.app/registration.php"),
+        headers: {
         "Accept": "application/json",
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -644,7 +645,7 @@ class _SignUpState extends State<SignUp> {
       body: data,
         encoding: Encoding.getByName("utf-8")
     )  ;
-
+    print(response.statusCode);
     if (response.statusCode == 200) {
 
       setState(() {
@@ -743,7 +744,7 @@ class _SignUpState extends State<SignUp> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: new Text("Panammun 2022",  style: GoogleFonts.prata(
+          title: new Text("Panammun 2023",  style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),
           content: new Text("Correo enviado exitosamente",  style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),
@@ -766,7 +767,7 @@ class _SignUpState extends State<SignUp> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: new Text("Panammun 2022",  style: GoogleFonts.prata(
+          title: new Text("Panammun 2023",  style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),
           content: new Text("Error al enviar correo",  style: GoogleFonts.prata(
               textStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03, letterSpacing: 1))),

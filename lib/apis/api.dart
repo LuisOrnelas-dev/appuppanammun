@@ -3,8 +3,8 @@
 //const String ROOT="http://192.168.0.4"; //ip of my local machine, in my house2
 //const String ROOT="http://192.168.1.54"; //ip of my local machine at work
 //const String ROOT="http://maindsteel.tech"; //ip of maindsteel.tech
-//const String ROOT="https://up-panammun.herokuapp.com";
-const String ROOT = "https://panammun-production.up.railway.app";
+const String ROOT="https://up-panammun.herokuapp.com";
+//const String ROOT = "https://panammun-production.up.railway.app";
 /*const String REGISTRATION="$ROOT/api/registration.php";
 const String LOGIN="$ROOT/api/login.php";
 const String COMITES="$ROOT/api/comites.php";
